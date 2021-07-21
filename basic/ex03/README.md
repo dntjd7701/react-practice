@@ -52,8 +52,10 @@
 4. 어플리케이션 작성   
 [index.js]
 ```javascript
+import { App } from './App.js';
 // rendering
 document.getElementById('root').appendChild(App());
+
 ```
 
 [App.js]
@@ -62,7 +64,15 @@ const App = function(){
     const app = document.createElement('h1');
     app.textContent = 'Hello World';
     return app;
+
+    export { App }
 }
+```
+
+[index.html]
+```html
+<script type="module" src='index.js'></script>
+<script type="module" src='App.js'></script>
 ```
 
 5. Test(Test server execution)
@@ -72,7 +82,8 @@ const App = function(){
 
 
 6. 결론
-  - 
+  - 프론트엔드 어플리케이션이 수십에서 수백 개의 모듈로 분리된 경우, 브라우저에서 개별적으로 이 모듈들을 import하는 것은 상당히 비효율적이다.
+  = 프론트엔드 어플리케이션은 자바스크립트 외에 다양한 asset(css,img,font...)에 대한 로딩 동기화도 고려되어야 한다. 
 
 
 <br/>

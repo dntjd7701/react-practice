@@ -1,3 +1,3 @@
-import { App } from './App.js';
+import { App } from './App';
 // rendering
 document.getElementById('root').appendChild(App());
