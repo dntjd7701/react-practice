@@ -1,22 +1,23 @@
-## ex01 : 전통적인 DOM API 기반의 어플리케이션 
+## ex03 : 어플리케이션 분리(2) : ES6 Module System, 어플리케이션 분리(1)
 
 1. 프로젝트 생성
     ```bash
-    $ mkdir ex01
-    $ cd ex01
+    $ mkdir ex03
+    $ cd ex03
     $ npm init -y
     $ npm i -D express(서버 개발의 목적이 아닌 단순 실행 목적 )
     ```
 2. 프로젝트 디렉터리
 <pre>
 
-    /ex01
+    /ex03
         |--- package.json
         |--- package-lock.json
         |--- node-modules
         |--- /public
                 |--- index.html
                 |--- index.js
+                |--- App.js
         |--- dev-server
 </pre>
 
@@ -25,7 +26,7 @@
 
 
 {
-  "name": "ex01",
+  "name": "ex03",
   "version": "1.0.0",
   "description": "",
   "type": "module",  /*  < type을 지정함. 이렇게 되면 require 사용 못함.
@@ -51,14 +52,17 @@
 4. 어플리케이션 작성   
 [index.js]
 ```javascript
+// rendering
+document.getElementById('root').appendChild(App());
+```
+
+[App.js]
+```javascript
 const App = function(){
     const app = document.createElement('h1');
     app.textContent = 'Hello World';
     return app;
 }
-
-// rendering
-document.getElementById('root').appendChild(App());
 ```
 
 5. Test(Test server execution)
@@ -68,10 +72,7 @@ document.getElementById('root').appendChild(App());
 
 
 6. 결론
-  - DOM API를 직접 자바스크립트 코드로 호출
-  - 주로 DOM 조작에 특화된 jQuery와 같은 라이브러리를 활용한다.
-  - 장점은, 작성된 어플리케이션 코드의 전달이 쉽다.(작성된 대로 js 파일을 html에 링크(랜딩))
-
+  - 
 
 
 <br/>
