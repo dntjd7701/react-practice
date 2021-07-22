@@ -1,35 +1,30 @@
-## webpack-practices: ex04     
+## webpack-practices: ex07     
 ---
+- 간단한 webpack loader 작성하고 설정해보기(src/text-loader.js)
 
 1. 프로젝트 생성
 ```bash
- mkdir ex04
- cd ex04
+ mkdir ex07
+ cd ex07
  npm init -y
- npm i -D webpack webpack-cli webpack-dev-server css-loader style-loader node-sass file-loader sass-loader
+ npm i -D webpack webpack-cli webpack-dev-server 
  npm i 
 
  npm un -D webpack
 ```
 2. 프로젝트 구조 
 <pre>
-    /ex04
+    /ex07
         |--- package.json
         |--- package-lock.json
         |--- node-modules
         |--- /public
                 |--- index.html
-                |--- bundle.html
-                |--- /assets
-                        |--- /images
-                                |---  logo.svg [build 결과]
-                                
+                |--- bundle.js
         |--- /src
                 |--- index.js
                 |--- App.js
-                |--- _variables.scss
-                |--- App.scss
-                |--- logo.svg
+                |--- text-loader.js
         |--- /webpack.config.js [ webpack config 파일 ]
 </pre>
 3. 빌드하기(image 복사를 위해서 먼저 꼭 해야한다.)
@@ -58,18 +53,8 @@ module.exports = {
     },
    module: {
         rules: [{
-            test: /\.css$/i, // 대소문자 구분없이 .css로 끝나는 것
-            use: ['style-loader', 'css-loader'] // inline과 css파일 로더 
-        }, {
-            test: /\.s[ac]ss$/i, // sass or scss
-            use: ['style-loader','css-loader','sass-loader']
-        }, {
-            test: /\.svg$/i,
-            loader: 'file-loader',
-            options: {
-                outputPath: '/assets/images',
-                name: '[name].[ext]'
-            }
+            test: /\.css$/i, 
+            loader: 'src/text-loader.js'
         }]
     },
     devServer: {

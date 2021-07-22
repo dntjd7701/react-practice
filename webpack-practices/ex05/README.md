@@ -6,7 +6,7 @@
  mkdir ex04
  cd ex04
  npm init -y
- npm i -D webpack webpack-cli webpack-dev-server css-loader style-loader node-sass
+ npm i -D webpack webpack-cli webpack-dev-server css-loader style-loader node-sass sass-loader
  npm i 
 
  npm un -D webpack
@@ -51,7 +51,7 @@ module.exports = {
    module: {
         rules: [{
             test: /\.css$/i, // 대소문자 구분없이 .css로 끝나는 것
-            use: ['style-loader', 'css-load'] // inline과 css파일 로더 
+            use: ['style-loader', 'css-loader'] // inline과 css파일 로더 
         }, {
             test: /\.s[ac]ss$/i, // sass or scss
             use: [

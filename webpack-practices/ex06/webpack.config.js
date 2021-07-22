@@ -12,14 +12,17 @@ module.exports = {
     module: {
         rules: [{
             test: /\.css$/i, // 대소문자 구분없이 .css로 끝나는 것
-            use: ['style-loader', 'css-load'] // inline과 css파일 로더 
+            use: ['style-loader', 'css-loader'] // inline과 css파일 로더 
         }, {
             test: /\.s[ac]ss$/i, // sass or scss
-            use: [
-                'style-loader',
-                'css-loader',
-                'sass-loader'
-            ]
+            use: ['style-loader','css-loader','sass-loader']
+        }, {
+            test: /\.svg$/i,
+            loader: 'file-loader',
+            options: {
+                outputPath: '/assets/images',
+                name: '[name].[ext]'
+            }
         }]
     },
     devServer: {

@@ -12,7 +12,7 @@ module.exports = {
     module: {
         rules: [{
             test: /\.css$/i, // 대소문자 구분없이 .css로 끝나는 것
-            use: ['style-loader', 'css-load'] // inline과 css파일 로더 
+            use: ['style-loader', 'css-loader'] // inline과 css파일 로더 
         }]
     },
     devServer: {
