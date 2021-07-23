@@ -1,21 +1,13 @@
-## ex06 : React(JSX 기반) 어플리케이션으로 리팩토링 : babel(transpile)
+## ex07 : CRA로 만든 Application Remade
 
-1. webpack은 작게 분리된 많은 모듈들의 의존성을 분석하여 하나의 js파일로 묶는 도구 
-2. 하나의 js 파일을 번들(bundle)이라 하고 묶는 작업을 번들링(bundling)이라고 한다.
-3. 번들링은 단순히 모듈을 하나의 파일로 묶는 작업만을 의미하는 것이 아닌, 어플리케이션 빌드 작업도 병행한다.
-4. 빌드 작업 : (webpack)
-    + linting(ESLint, 문법 체크) 작업,
-    + document 작업(JSDoc) 작업,
-    + testing(Mocha, Jest) 작업,
-    + 난독화/압축(Uglify) 작업,
-    + 번들링(bundling)
-5. 자바스크립트 뿐만 아니라 다양한 에셋 (image, css, font)들도 모듈로 취급하는 추상화를 한다. (loader)
+### 자세한 코드 보기 
+https://github.com/dntjd7701/react-practice/tree/main/basic/ex07
 
 
 1. 프로젝트 생성
     ```bash
-    $ mkdir ex05
-    $ cd ex05
+    $ mkdir ex07
+    $ cd ex07
     $ npm init -y
     $ npm i -D webpack webpack-cli webpack-dev-server
     $ node node_modules/.bin/webpack --version
@@ -24,12 +16,6 @@
     $ npm i -D @Babel/core @babel/preset-env @babel/preset-react @babel/cli
     $ npx webpack
     ```
-
-- 개발 목적으로 사용할 webpack들과 어플리케이션에 들어갈 react를 설치한다.
-  여기서 react는 엔진, react-dom은 virtual dom을 만든다. 
-- @Babel은 패키지를 나타낸다.
-- Plugin을 모아서 프리셋을 만들어 놨다. 
- 여기서 **preset-env**는 ES6 -> ES5로 바꿔준다. (가장 안전성있고 완성되어있는 버전이기 때문)
 
 
 >  @babel/cli   
@@ -49,11 +35,9 @@
       이러한 플러그인들의 집합을 preset 이라 칭한다. (ex. 압축관련 플러그인 집합: babel-preset-minify)
 
 
-  
-
 2. 프로젝트 디렉터리
 <pre>
-    /ex05
+    /ex07
         |--- package.json
         |--- package-lock.json
         |--- node-modules
@@ -66,7 +50,7 @@
         |--- webpack.config.js
 </pre>
 
-3. scripts
+3. package.json, scripts
 ```json
 
 
@@ -78,7 +62,7 @@
 
 
 ```
-4. webpack.config.js
+4. [ webpack.config.js ] 
 ```javascript
 
 const path = require('path');
@@ -109,7 +93,7 @@ module.exports = {
 
 }
 ```
-5. babe.config
+5. [ babe.config ]
 ```json
 {
     "presets": [
@@ -131,7 +115,6 @@ module.exports = {
 }
 ```
 
-
 6. 빌드(번들링)
 
 ```bash
@@ -143,7 +126,7 @@ module.exports = {
   $ npm run start
 ```
 
-### index.js
+### [ index.js ]
 
 >  리액트는 함수, 클래스는 Component가 된다.
 ```javascript
@@ -184,10 +167,5 @@ const App = function(){
 
 export default App;
 
-
-
 ```
 
-
-### 자세한 코드 보기 
-https://github.com/dntjd7701/react-practice/tree/main/basic/ex06
