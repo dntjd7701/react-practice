@@ -1,3 +1,13 @@
+> @babel/core, @babel/cli 를 이용하여 transpile 해보기 
+
+## CLI 사용법
+1. 설치 
+```bash
+$ npm i -D @babel/core @babel/cli
+```
+
+2. 소스 파일 작성(ES6)
+```javascript
 // ES6으로 만들어진 플러그인 
 //  플럭그인을 적용하여 ES6의 '=>' 등을 변환해보는 과정 
 
@@ -23,3 +33,13 @@ function print({no, name, email}){
 for(let user of users){
     print(user);
 };
+```
+
+
+3. 변환하기
+```bash
+$ npx babel src -d dist
+Successfully compiled 1 file with Babel (77ms).
+```
+- -d  : 결과를 지정한 디렉터리로 변환하여 저장한다.
+- 플러그인을 지정하지 않으면 결과는 바뀌지 않는다. 

@@ -1,4 +1,14 @@
 {
+  "name": "ex02",
+  "version": "1.0.0",
+  "description": "1. 변환 규칙을 소스에 적용하여 변환 파일을 생성한다. 2. 변환 규칙은 가지고 있지 않다.  3. 변환 규칙은 플러그인이 가지고 있다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.14.8",
     "@babel/core": "^7.14.8"
