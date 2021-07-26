@@ -1,7 +1,7 @@
 {
     "presets": [
         [
-            "@babel/env",
+            "@babel/preset-env",
             {
                 "targets": {
                     "ie": "11",
@@ -12,7 +12,6 @@
                     "safari": "15"
                 }
             }
-        ],
-        "@babel/react"
+        ]
     ]
 }

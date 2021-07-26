@@ -84,6 +84,7 @@ $ npx babel src/ex01.js -o dist/ex01.03.js --plugins @babel/plugin-transform-tem
 .
 .
   console.log("".concat(no, " : ").concat(name, " : ").concat(email));
+}
 ```
 
 4. for ..of 변환 (**@babel/plugin-transform-for-of**)

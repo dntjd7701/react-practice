@@ -1,11 +1,11 @@
 {
-  "name": "ex07",
+  "name": "ex08",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "debug": "npx webpack serve --progress --mode development",
+    "debug": "npx webpack serve --progress --mode development --env src=01",
     "build": "npx webpack --mode production"
   },
   "keywords": [],
