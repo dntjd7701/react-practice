@@ -5,4 +5,4 @@ import App from './App';
 ReactDOM.render(<App/>, document.getElementById('root'));
 
 
-// FoodList. src/02: Data Flow with Class Component
+// FoodList. src/02: Data Flow with Class Component 
