@@ -1,9 +1,11 @@
 import React from 'react';
+import Guestbook from './Guestbook';
+
 
 export default function(){
     return (
         <div className="App">
-            <h2>Guestbook</h2>
+            <Guestbook />
         </div>
     );
 };  
