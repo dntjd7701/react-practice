@@ -1,4 +1,4 @@
-#### ex01: Property: Component 작성 (Date Flow: Top -> Down)    
+#### [ex01](https://github.com/dntjd7701/react-practice/tree/main/kanban/src/ex01): Property: Component 작성 (Date Flow: Top -> Down)   
 - Kanban Board #1
 #### ex02:Component Styling                                    
 - Kanban Board #1 
