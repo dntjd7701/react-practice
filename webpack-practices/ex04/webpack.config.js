@@ -4,6 +4,7 @@
 const path = require('path');
 
 module.exports = {
+    mode: 'development',
     entry: path.resolve('src/index.js'),
     output:{
         path: path.resolve('public'),
@@ -16,12 +17,13 @@ module.exports = {
         }]
     },
     devServer: {
-        contentBase: path.resolve('public'), 
+        contentBase: path.resolve('public'),
+        watchContentBase: true,
         host: "0.0.0.0",
-        port: 7000,
-        inline: true, 
-        liveReload: true, 
-        hot: false, 
+        port: 9999,
+        inline: true,
+        liveReload: true,
+        hot: false,
         compress: true,
         historyApiFallback: true
     }

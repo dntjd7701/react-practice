@@ -4,6 +4,7 @@
 const path = require('path');
 
 module.exports = {
+    mode: "development",
     entry: path.resolve('src/index.js'),
     output:{
         path: path.resolve('public'),
@@ -11,26 +12,19 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.css$/i, // 대소문자 구분없이 .css로 끝나는 것
-            use: ['style-loader',{loader:'css-loader', options: {modules: true}}] // inline과 css파일 로더 
-        }, {
-            test: /\.s[ac]ss$/i, // sass or scss
-            use: [
-                'style-loader',
-                'css-loader',
-                'sass-loader'
-            ]
-        }]
+            test: /\.(sa|sc|c)ss$/i, // 대소문자 구분없이 .css로 끝나는 것
+            use: ['style-loader','css-loader', 'sass-loader'] // inline과 css파일 로더 
+        }], 
     },
     devServer: {
-        contentBase: path.resolve('public'), 
+        contentBase: path.resolve('public'),
+        watchContentBase: true,
         host: "0.0.0.0",
-        port: 7000,
-        inline: true, 
-        liveReload: true, 
-        hot: false, 
+        port: 9999,
+        inline: true,
+        liveReload: true,
+        hot: false,
         compress: true,
         historyApiFallback: true
     }
-
 }
