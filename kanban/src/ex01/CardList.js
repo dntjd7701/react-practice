@@ -10,7 +10,7 @@ export default function CardList({ title, cards }){
                                     key={card.no} 
                                     title={card.title} 
                                     description={card.description}
-                                    tasks={ cards.tasks } />)}
+                                    tasks={ card.tasks } />)}
         </div>
     );
 };  

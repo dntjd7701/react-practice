@@ -4,7 +4,7 @@
 const path = require('path');
 
 module.exports = {
-    mode: "development",
+    mode: "none",
     entry: path.resolve('src/index.js'),
     output:{
         // 번들링 위치와 번들 파일명 지정
@@ -22,6 +22,7 @@ module.exports = {
             use: ['style-loader','css-loader', 'sass-loader'] // inline과 css파일 로더 
         }]
     },
+    devtool: "eval-source-map",
      devServer: {
         contentBase: path.resolve('public'),
         watchContentBase: true,
