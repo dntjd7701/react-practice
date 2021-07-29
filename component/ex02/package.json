@@ -1,10 +1,10 @@
 {
-  "name": "guestbook",
+  "name": "ex02",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "debug": "npx webpack serve --progress --mode development",
+    "debug": "npx webpack serve --progress --mode development --env",
     "build": "npx webpack --mode production"
   },
   "keywords": [],
