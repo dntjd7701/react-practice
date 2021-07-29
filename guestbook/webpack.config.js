@@ -6,7 +6,8 @@ module.exports = () =>  {
         entry: path.resolve('src/index.js'),
         output: {
             path: path.resolve('public'),
-            filename: 'bundle.js'
+            filename: 'bundle.js',
+            assetModuleFilename: 'assets/images/[hash][ext]'
         },
         module: {
             rules:[{
@@ -18,7 +19,6 @@ module.exports = () =>  {
                 ]
             }, {
                 test: /\.(svg|jpe?g|gif|png|tiff?|bmp|ico|)$/i,
-                loader: 'file-loader',
                 type: 'asset/resource'
             }, {
                 test: /\.js$/i,
