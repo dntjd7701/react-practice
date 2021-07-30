@@ -4,10 +4,9 @@ import styles from '../assets/css/Task.css';
 export default function Task({ name }){
     return (
         <li className={ styles.TaskList__Task }>
-            <input type='checkbox' defaultChecked={ true } />
-            <li>{ name }</li>
+            <input type='checkbox' defaultChecked={ false } />
+                {name}
             <a href='#' className={styles['TaskList__Task--remove']}></a>
-            
         </li>
     );
 };  

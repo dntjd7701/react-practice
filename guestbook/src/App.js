@@ -1,12 +1,14 @@
 import React from 'react';
 import Guestbook from './Guestbook';
-import styles from './assets/scss/App.scss';
+import './assets/scss/App.scss';
 
-
-export default function(){
+// [scroll] outer div와 inner div 생성
+export default function App(){
     return (
-        <div className={ styles.App }>
-            <Guestbook />
+        <div className={ 'App' }>
+            <div>
+                <Guestbook />
+            </div>
         </div>
     );
 };  

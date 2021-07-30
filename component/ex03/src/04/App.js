@@ -1,8 +1,14 @@
-import React, {Fragment} from 'react';
+import React, { useRef, Fragment } from 'react';
 import logo from '../assets/images/react-logo.png';
-// file-loader를 지금 안붙여도된다.
-// 왜?
+
+
 export default function App() {
+    const imageRef = useRef(null); 
+    // ref를 쓰기위해 객체를 생성한다. 
+    // 여기선 ref할 상대를 알 수 없다.
+    // 그렇기에 null로 세팅을한다.
+
+
     const onKeyPressInput = function(e){
         // 이름이 지정되어있다.
         // Virtual key 검색
@@ -16,29 +22,34 @@ export default function App() {
         console.log('onBlurInput');
     }
     
+
     const onMouseOverImage = function(e){
         // 마우스 위치 
-        console.log('onMouseOverImage');
+        console.log('onMouseOverImage',`x=${e.clientX}, y=${e.clientY}`);
     }
     const onMouseMoveImage = function(e){
-        console.log('onMouseMoveImage',`x=${e.clientX}, y=${e.clientY}`);
+        const offsetTop = imageRef.current.offsetTop;
+        const offsetLeft = imageRef.current.offsetLeft;
+        // image 안에서의 좌표 구하기 
+        console.log('onMouseMoveImage',`x=${e.clientX - offsetLeft}, y=${e.clientY - offsetTop}`);
     }
+    // document.getElementById('image').offsetTop
     const onMouseOutImage = function(e){
-        console.log('onMouseOutImage');
+        console.log('onMouseOutImage',`x=${e.clientX}, y=${e.clientY}`);
     }
     const onMouseDownImage = function(e){
-        console.log('onMouseDownImage');
+        console.log('onMouseDownImage',`x=${e.clientX}, y=${e.clientY}`);
     }
     const onMouseUpImage = function(e){
-        console.log('onMouseUpImage');
+        console.log('onMouseUpImage',`x=${e.clientX}, y=${e.clientY}`);
     }
 
     const onClickImage = function(e){
-        console.log('onClickImage');
+        console.log('onClickImage',`x=${e.clientX}, y=${e.clientY}`);
     }
 
     const onDoubleClickImage = function(e){
-        console.log('onDoubleClickImage');
+        console.log('onDoubleClickImage',`x=${e.clientX}, y=${e.clientY}`);
     }
 
 
@@ -55,6 +66,7 @@ export default function App() {
                 <br/>
                 <br/>
             <img
+                ref = { imageRef }
                 style={ {
                     cursor: 'pointer',
                     width: 190,
