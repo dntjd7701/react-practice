@@ -1,4 +1,4 @@
-## Compnent - Property: Component 작성 (Date Flow: Top -> Down)
+## Compnent - Property: Component 작성 (Date Flow: Top -> Bottom)
 
 
 ### 01. props(Property)
@@ -12,6 +12,8 @@
 ### 02. FoodList. src/01: Class Component
 ### 03. FoodList. src/02: Data Flow with Class Component
 ### 04. FoodList. src/03: Data Flow with Function Component
+### 05. src/04: Property Validation(Design 할 때)
+
 .
 .
 .

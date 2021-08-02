@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import TaskList from './TaskList';
 import styles from '../assets/scss/Card.scss';
 
 export default function Card({ title, description, status, tasks}){
+    const [showDetails, setShowDetails] = useRef(true);
     const styleSideColor={
         position:'absolute',
         top:0,
@@ -14,11 +15,13 @@ export default function Card({ title, description, status, tasks}){
     return (
         <div className= { styles.Card }>
             <div style= { styleSideColor }/>
-                <div className= { [styles.Card__Title, styles['Card__Title__open']] }>{ title }</div>
-                <div className={ styles.Card__Details }>
-                    { description }
-                    <TaskList tasks={ tasks } />
+                <div
+                    className=
+                    { showDetails ? [styles.Card__Title, styles.Card__Title__open].join('') : styles.Card__Title }
+                    onClick={ e => { setShowDetails(!showDetails )}}>{ title }
                 </div>
+            { showDetails ? <div className={styles.Card__Details} > {description} <TaskList tasks={ tasks }/> </div> : null }
+
         </div>
     );
 };  
