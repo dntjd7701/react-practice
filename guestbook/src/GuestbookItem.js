@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import styles from './assets/scss/GuestbookItem.scss';
+import {PropTypes} from 'prop-types';
 
 export default function GuestbookItem({no, name, message, regDate}){
     return (
@@ -15,3 +16,11 @@ export default function GuestbookItem({no, name, message, regDate}){
         </li>
     )
 }
+GuestbookItem.propTypes = {
+    no: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    message: PropTypes.string.isRequired
+}
+
+
+
