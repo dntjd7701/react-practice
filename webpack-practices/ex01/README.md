@@ -21,7 +21,7 @@
                 |--- main.js
         |--- /src
                 |--- index.js
-                |--- App.js
+                |--- EmaillistApp.js
         |--- dev-server.mjs
 </pre>
 

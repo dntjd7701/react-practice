@@ -25,7 +25,7 @@
                                 |--- _variables.scss
                                 |--- App.scss
                 |--- index.js
-                |--- App.js
+                |--- EmaillistApp.js
         |--- /webpack.config.js [ webpack config 파일 ]
 </pre>
 

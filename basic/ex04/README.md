@@ -34,7 +34,7 @@
                 |--- bundle.js
         |--- /src
                 |--- index.js
-                |--- App.js
+                |--- EmaillistApp.js
         |--- dev-server
 </pre>
 
@@ -79,7 +79,7 @@ import { App } from './App';
 document.getElementById('root').appendChild(App());
 ```
 
-[src/App.js]
+[src/EmaillistApp.js]
 ```javascript
 const App = function(){
     const app = document.createElement('h1');

@@ -18,7 +18,7 @@
                 |--- index.html
         |--- /src
                 |--- index.js
-                |--- App.js
+                |--- EmaillistApp.js
         |--- /webpack.config.js [ webpack config 파일 ]
 </pre>
 

@@ -142,7 +142,7 @@ export default function App() {
  + 같은 클래스명을 사용하더라도 모듈별로 css가 적용되기 때문에 다르게 적용된다. 
  + 동일한 코드이지만, 모듈로 쓰고 있기 때문에 다른 css가 적용된다.
  
-[App.js]
+[EmaillistApp.js]
 ```jsx
 import React from 'react';
 import './assets/css/App.css';

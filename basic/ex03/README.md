@@ -17,7 +17,7 @@
         |--- /public
                 |--- index.html
                 |--- index.js
-                |--- App.js
+                |--- EmaillistApp.js
         |--- dev-server
 </pre>
 
@@ -52,13 +52,13 @@
 4. 어플리케이션 작성   
 [index.js]
 ```javascript
-import { App } from './App.js';
+import { App } from './EmaillistApp.js';
 // rendering
 document.getElementById('root').appendChild(App());
 
 ```
 
-[App.js]
+[EmaillistApp.js]
 ```javascript
 const App = function(){
     const app = document.createElement('h1');
@@ -72,7 +72,7 @@ const App = function(){
 [index.html]
 ```html
 <script type="module" src='index.js'></script>
-<script type="module" src='App.js'></script>
+<script type="module" src='EmaillistApp.js'></script>
 ```
 
 5. Test(Test server execution)

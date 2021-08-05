@@ -62,7 +62,7 @@
                 |--- bundle.js [ 빌드 결과물 ]
         |--- /src
                 |--- index.js
-                |--- App.js
+                |--- EmaillistApp.js
         |--- webpack.config.js
 </pre>
 

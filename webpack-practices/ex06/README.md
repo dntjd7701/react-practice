@@ -26,7 +26,7 @@
                                 
         |--- /src
                 |--- index.js
-                |--- App.js
+                |--- EmaillistApp.js
                 |--- _variables.scss
                 |--- App.scss
                 |--- logo.svg

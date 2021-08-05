@@ -17,7 +17,7 @@
         |--- /public
                 |--- index.html
                 |--- index.js
-                |--- App.js
+                |--- EmaillistApp.js
         |--- dev-server
 </pre>
 
@@ -56,7 +56,7 @@
 document.getElementById('root').appendChild(App());
 ```
 
-[App.js]
+[EmaillistApp.js]
 ```javascript
 const App = function(){
     const app = document.createElement('h1');
