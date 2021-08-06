@@ -3,13 +3,43 @@ import './assets/scss/Clock.scss';
 import Colon from './Colon';
 
 export default class Clock extends Component {
+    constructor() {
+        super(...arguments);
+        this.state = {
+            hours: '00',
+            minutes: '00',
+            seconds: '00',
+            session: 'am',
+        }
+            this.count = 0;
+    }
+    componentDidMount() {
+        this.interver = setInterval(function () {
+            if(++this.count == 10){
+                this.props.callback();
+            }
+            const date = new Date();
+            const hours = date.getHours();
+            const minutes = date.getMinutes();
+            const seconds = date.getSeconds();
+
+            this.setState({
+                hours: `0${ hours ===  0 ? 12 : hours > 12 ? hours - 12 : hours  }`.slice(-2),
+                minutes: `0${minutes}`.slice(-2),
+                seconds: `0${seconds}`.slice(-2),
+                session: hours > 12 ? 'pm' : 'am'
+            })
+
+        }.bind(this), 1000);
+    }
+
     render() {
         return (
             <div className="Clock">
 
                 {/* hours */}
                 <div className="numbers">
-                    <p>10</p>
+                    <p>{ this.state.hours }</p>
                     <p className="placeholder"></p>
                     <p className="type">hour</p>
                 </div>
@@ -18,7 +48,7 @@ export default class Clock extends Component {
 
                 {/* minutes */}
                 <div className="numbers">
-                    <p>20</p>
+                    <p>{ this.state.minutes }</p>
                     <p className="placeholder"></p>
                     <p className="type">minute</p>
                 </div>
@@ -27,7 +57,7 @@ export default class Clock extends Component {
 
                 {/* seconds */}
                 <div className="numbers">
-                    <p>45</p>
+                    <p>{ this.state.seconds }</p>
                     <p className="placeholder"></p>
                     <p className="type">second</p>
                 </div>
@@ -35,14 +65,20 @@ export default class Clock extends Component {
                 {/* am-pm */}
                 <div className="AmPm">
                     <div>
-                        <p className={ 'on'   }>am</p>
+                        <p className={ this.state.session === 'am' ? 'on' : 'off' }>am</p>
                     </div>
                     <div>
-                        <p className={ 'off' }>pm</p>
+                        <p className={ this.state.session === 'pm' ? 'on' : 'off' }>pm</p>
                     </div>
                 </div>
 
             </div>
         );
+    }
+
+    componentWillUnmount() {
+        console.log('Click', 'componentWillUnmount() occured');
+        // clean-up
+        clearInterval(this.interval);
     }
 }
