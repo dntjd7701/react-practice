@@ -1,8 +1,15 @@
-#### [ex01](https://github.com/dntjd7701/react-practice/tree/main/kanban/src/ex01): Property: Component 작성 (Date Flow: Top -> Down)   
+#### [예제](https://github.com/dntjd7701/react-practice/tree/main/kanban/src): Property: Component 작성 (Date Flow: Top -> Down)   
 - Kanban Board #1
 #### ex02:Component Styling                                    
-- Kanban Board #1 
+- Kanban Board #2 
 
+#### ex03:React Event
+- Kanban Board #3,#4(Props Type)
+
+#### ex04:State
+#### ex05:Component LifeCycle
+
+#### AJAX(fetch, axios)
 
 ## Kanban
 
