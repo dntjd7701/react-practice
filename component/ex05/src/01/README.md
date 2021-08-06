@@ -1,3 +1,41 @@
+[자세한 코드 보기 ](https://github.com/dntjd7701/react-practice/tree/main/component)
+
+[LifeCycle diagram 보기 ](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+
+### Class Component LifeCycle
+
+1. **Mount LifeCycle**
+
+    - constructor
+    - getDerivedStateFromProps(nextProps, prevState): props로 받아온 값을 state에 동기화 한다.[react ver16.3]
+    - render
+    - ***componentDidMount***: 컴포넌트 생성을 마치고 첫 렌더링 작업이 끝난 후
+
+
+![](https://images.velog.io/images/dntjd7701/post/c7ef121d-0c14-4100-bf4d-1fad929ec97b/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-08-05%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2012.50.45.png)
+    
+    
+![](https://images.velog.io/images/dntjd7701/post/5466217c-a714-4008-a3ee-b7f5d50b98e7/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-08-05%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2012.51.42.png)
+
+
+2. **Update LifeCycle**
+
+    - getDerivedStateFromProps(): props로 받아온 값을 state에 동기화 한다.[react ver16.3]
+    - shouldComponentUpdate(nextProps, nextState): state이 변경 되었을 때, 랜더링 여부를 결정한다.
+    - render()
+    - getSnapshotBeforeUpdate: render() 호출 후, DOM에 변화를 반영하기 직전에 호출
+    - componentDidUpdate: DOM 업데이트가 끝난 직후, DOM 작업이 가능하다.
+
+
+3. **Unmount LifeCycle**
+4. 예제: [src/01](https://github.com/dntjd7701/react-practice/tree/main/component/ex05/src/01)
+
+
+	moun가 될때의 함수의 흐름과 update, unmount될 때 각자 가지는 함수의 흐름을 LifeCycle이라고 한다. 
+
+> 코드 예제
+
+ ```jsx
 import React, { Component, useState } from 'react';
 
 export default class LifeCycle extends Component {
@@ -45,6 +83,10 @@ export default class LifeCycle extends Component {
                     backgroundColor: this.props.color
                 }}
                 ref={ (ref) => {this.h3Ref = ref;} }
+                /**
+                *
+                */
+
             />
         );
     }
@@ -102,3 +144,6 @@ export default class LifeCycle extends Component {
         console.log(`[UNMOUNT] : componentWillUnmount()`);
     }
 }
+
+```
+ 
