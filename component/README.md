@@ -6,7 +6,4 @@
 ### ex04: State
 ### ex05: Component Lifecycle ** + AJAX(fetch, axos)
 
-
-### Guestbook SPA [과제]
-### Gallery SPA [과제]
  
