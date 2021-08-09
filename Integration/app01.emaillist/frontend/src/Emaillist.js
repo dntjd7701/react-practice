@@ -8,7 +8,7 @@ export default function Emaillist({ keyword, emails }) {
         <ul className={ 'Emaillist' }>
 
             {
-                emails.filter(
+               emails && emails.filter(
                     email => email.firstName.indexOf(keyword) !== -1 ||
                         email.lastName.indexOf(keyword) !== -1 ||
                         (`${ email.firstName }${email.lastName}`).indexOf(keyword) !== -1||
@@ -19,7 +19,6 @@ export default function Emaillist({ keyword, emails }) {
                         lastName={email.lastName}
                         email={email.email} /> )
             }
-
         </ul>
     )
 }

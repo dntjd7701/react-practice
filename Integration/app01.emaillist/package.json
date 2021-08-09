@@ -11,8 +11,10 @@
     "dev:frontend": "cross-env NODE_ENV=development webpack serve --config frontend/config/webpack.config.js --mode development --progress",
     "stop": "pkill -9 $npm_package_name",
     "postinstall": "npm run build",
-    "build": "",
-    "dev": "npm run dev:backend && npm run dev:frontend"
+    "build": "npm run build:frontend",
+    "build:backend": "",
+    "build:frontend": "cross-env NODE_ENV=production webpack -config frontend/config/webpack.config.js --mode production --progress ",
+    "dev": "concurrently 'npm run dev:backend' 'npm run dev:frontend' --kill-others"
   },
   "keywords": [],
   "author": "",
@@ -31,10 +33,12 @@
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
+    "@babel/plugin-transform-runtime": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
     "@babel/preset-react": "^7.14.5",
     "babel-loader": "^8.2.2",
     "chai": "^4.3.4",
+    "concurrently": "^6.2.1",
     "cross-env": "^7.0.3",
     "css-loader": "^6.2.0",
     "mocha": "^9.0.2",
