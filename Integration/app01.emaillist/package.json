@@ -13,7 +13,7 @@
     "postinstall": "npm run build",
     "build": "npm run build:frontend",
     "build:backend": "",
-    "build:frontend": "cross-env NODE_ENV=production webpack -config frontend/config/webpack.config.js --mode production --progress ",
+    "build:frontend": "cross-env NODE_ENV=production webpack --config frontend/config/webpack.config.js --mode production --progress ",
     "dev": "concurrently 'npm run dev:backend' 'npm run dev:frontend' --kill-others"
   },
   "keywords": [],
