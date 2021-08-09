@@ -1,0 +1,5 @@
+2021-08-09 12:29:06 error: Error: Failed to lookup view "index" in views directory "/Users/kang-woosung/vscode-projects/react-practice/Integration/app01.emaillist/backend/views"
+    at Function.render (/Users/kang-woosung/vscode-projects/react-practice/Integration/app01.emaillist/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/Users/kang-woosung/vscode-projects/react-practice/Integration/app01.emaillist/node_modules/express/lib/response.js:1012:7)
+    at read (/Users/kang-woosung/vscode-projects/react-practice/Integration/app01.emaillist/backend/controllers/emaillist.js:7:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)

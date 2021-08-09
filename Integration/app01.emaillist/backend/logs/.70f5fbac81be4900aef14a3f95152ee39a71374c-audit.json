@@ -1,0 +1,14 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "/Users/kang-woosung/vscode-projects/react-practice/Integration/app01.emaillist/backend/logs/.70f5fbac81be4900aef14a3f95152ee39a71374c-audit.json",
+    "files": [
+        {
+            "date": 1628479513867,
+            "name": "/Users/kang-woosung/vscode-projects/react-practice/Integration/app01.emaillist/backend/logs/2021-08-09.log",
+            "hash": "9f59d3de9197c5d350ba28571ab66a71"
+        }
+    ]
+}
