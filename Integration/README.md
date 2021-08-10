@@ -40,8 +40,6 @@
     |--- package-lock.json
 </pre>
 
-
-
 2. nodemon
 3. webpack dev server
 4. package.json
@@ -58,6 +56,12 @@
 </pre>
 
 2. app02.kanban(fetch, post)
+<pre>
+- 개발 통합 설정(with Node Backend)
+- backend: API server only(Node express 기반)
+- frontend: React(SPA)
+- AJAX: fetch(ES5) 기반
+</pre>
 3. app03.guestbook
 4. app04.gallery
 5. app05.mysite
