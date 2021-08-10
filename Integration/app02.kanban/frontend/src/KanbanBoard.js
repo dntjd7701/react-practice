@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import CardList from './CardList';
 import styles from './assets/css/KanbanBoard.css';
+import update from 'react-addons-update';
+
 
 export default function KanbanBoard(){
     const [cards, setCards] = useState([]);
@@ -50,10 +52,18 @@ export default function KanbanBoard(){
                 if(json.result !== 'success'){
                     throw new Error(`${json.result} ${json.message}`);
                 }
-
-                console.log(json);
+                
+                const cardIndex = cards.findIndex((card) => card.no === cardNo);
+                const newCards = update(cards, {
+                    [cardIndex]: {
+                        tasks: {
+                            $push: [json.data]
+                        }
+                    }
+                });
+                setCards(newCards);
             } catch (error) {
-                console.error(e);
+                console.error(error);
             }
         },
         
