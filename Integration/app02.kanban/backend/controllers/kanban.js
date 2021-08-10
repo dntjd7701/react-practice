@@ -15,6 +15,21 @@ module.exports = {
             next(error);
         }
     },
-    insertTask: function(req,res,next){
+    createTask:async function(req,res,next){
+        try {
+            const cardNo = req.params['cardNo'];
+            const task = req.body;
+    
+            // model.insertTask(..) 했다 치고~
+            task.no = Date.now();
+            res.status(200)
+                .send({
+                    result: 'success',
+                    data: task,
+                    message: null
+                });
+        } catch (error) {
+            next(error);
+        }
     }
 }

@@ -15,8 +15,7 @@ const applicationRouter = {
         })
         .use("/api", require("./kanban"))
         .use(errorRouter.error404)
-        .use(errorRouter.error500)
+        .use(errorRouter.error500);
     }
- 
 }
 module.exports = { applicationRouter };

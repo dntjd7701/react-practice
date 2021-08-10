@@ -1,0 +1,16 @@
+.TaskList {
+    background-color: coral;
+}
+.TaskList_input_add_task {
+    border: 1px dashed #bbb;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 3px;
+    color: coral;
+    font-weight: bolder;
+}
+
+.TaskList_on_Click_color {
+    color: cyan;
+}
