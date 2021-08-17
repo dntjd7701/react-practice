@@ -9,12 +9,12 @@
 
 ### 설치
 ```bash
-$npm i react-router-dom
+$ npm i react-router-dom
 ```
 
 ### 실행
 ```bash
-$npm run debug src=[ex01|ex02...]
+$ npm run debug src=[ex01|ex02...]
 ```
 ---
 
