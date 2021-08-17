@@ -1,1 +1,0 @@
-(()=>{"use strict";document.getElementById("root").appendChild(function(){const t=document.createElement("h1");return t.textContent="오.....webpack 좋다... 개발 환경으로 딱인데",t}())})();
